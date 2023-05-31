@@ -1,5 +1,7 @@
 "use strict";
 
+const messages = document.getElementById('info')
+
 //array contenente i dati del team
 let ourTeam = [
     {
@@ -34,10 +36,14 @@ let ourTeam = [
     },
 ]
 
+//ciclo che mostra i dati in console
 for(let i in ourTeam){
-    console.log(`Membro n${parseInt(i)+1}`)
+    const membroDiv = document.createElement('div')
+    membroDiv.style.textTransform = 'capitalize'
+    membroDiv.innerHTML = `<h2>///////////// Membro numero ${parseInt(i)+1} /////////////</h2>`
     let membro = ourTeam[i]
     for (let j in membro){
-        console.log(membro[j])
+       membroDiv.innerHTML += `<p>${j}:${membro[j]}</p>`
     }
+    messages.append(membroDiv)
 }
