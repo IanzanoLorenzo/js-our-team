@@ -39,16 +39,17 @@ let ourTeam = [
 //ciclo che mostra i dati in console
 for(let i in ourTeam){
     const membroDiv = document.createElement('div')
+    membroDiv.classList.add('card')
     membroDiv.style.textTransform = 'capitalize'
-    membroDiv.innerHTML = `<h2>Membro numero ${parseInt(i)+1}</h2>`
+    membroDiv.innerHTML = ``
     let membro = ourTeam[i]
     // for (let j in membro){
     //    membroDiv.innerHTML += `<p>${j}:${membro[j]}</p>`
     // }
     membroDiv.innerHTML += `
     <img src="./img/${membro.foto}">
-    <p>Nome: ${membro.nome} </p>
-    <p>Ruolo: ${membro.ruolo} </p>
+    <h2>${membro.nome}</h2>
+    <h3>${membro.ruolo}</h3>
     `
     messages.append(membroDiv)
 }
