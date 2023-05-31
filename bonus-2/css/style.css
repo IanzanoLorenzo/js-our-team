@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+img{
+    width: 100%;
+}
+
+#info>*{
+    margin:auto
+}
+
+@media screen and (max-width: 768px){
+    #info{
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
